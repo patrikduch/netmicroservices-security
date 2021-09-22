@@ -24,3 +24,15 @@ services:
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+  items.db:
+    container_name: itemsdb
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=duch
+      - POSTGRES_DB=ItemsDb
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data 

@@ -20,3 +20,11 @@ services:
       context: .
       dockerfile: src/services/Items.API/Items.API/Dockerfile
 
+  items.db:
+    image: postgres
+
+
+
+volumes:
+  postgres_data:
+
