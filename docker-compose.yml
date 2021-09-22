@@ -23,8 +23,13 @@ services:
   items.db:
     image: postgres
 
-
+  identityserver:
+    image: ${DOCKER_REGISTRY-}identityserver
+    build:
+      context: .
+      dockerfile: src/services/IdentityServer/Dockerfile
 
 volumes:
   postgres_data:
+
 
