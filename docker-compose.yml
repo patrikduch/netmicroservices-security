@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: src/services/ApiGateway/Dockerfile
+
+  web.mvc:
+    image: ${DOCKER_REGISTRY-}webmvc
+    build:
+      context: .
+      dockerfile: src/services/Web.MVC/Web.Mvc/Dockerfile
+
+
+  items.api:
+    image: ${DOCKER_REGISTRY-}itemsapi
+    build:
+      context: .
+      dockerfile: src/services/Items.API/Items.API/Dockerfile
+
