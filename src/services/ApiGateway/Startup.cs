@@ -34,8 +34,7 @@ namespace ApiGateway
                 );
             });
 
-            services.AddOcelot()
-                .AddKubernetesFixed();
+            services.AddOcelot();
         }
 
 
@@ -46,7 +45,6 @@ namespace ApiGateway
             {
                 app.UseDeveloperExceptionPage();
             }
-
 
             app.UseRouting();
             app.UseCors("CorsPolicy");

@@ -1,3 +1,16 @@
 {
-
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/v1/items",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "items.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/items",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ]
 }
